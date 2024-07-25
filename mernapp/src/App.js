@@ -11,6 +11,7 @@ import Cart from './screens/Cart.js';
 import Order from './screens/Order.js';
 import Admin from './screens/Admin.js';
 import ResetPass from './screens/ResetPass.js';
+ import Delete from './screens/Delete.js';
 import PassConfermation from './screens/PassConfermation.js';
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/admin' element={<Admin />} />
           <Route path='/resetPass' element={<ResetPass />} />
           <Route path='/confirmPass/:id/:token' element={<PassConfermation />} />
+          <Route path='/delete' element={<Delete />} />
         </Routes>
       </div>
     </Router>

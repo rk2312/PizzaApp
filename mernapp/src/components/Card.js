@@ -20,6 +20,10 @@ export default function Card(props) {
     } 
    const handleAddCart=async ()=>{
     const updateitem=await state.find((e)=>e.tempId===data._id+size); 
+    if(!isLoggedIn)
+    {
+      alert(" Login to Add to cart");
+    }
     //checking if size is not present in cart then simple add
     if(!updateitem&&isLoggedIn){
       dispatch({

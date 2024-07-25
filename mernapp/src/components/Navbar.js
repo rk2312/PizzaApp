@@ -26,7 +26,7 @@ export default function Navbar() {
             <li className='nav-item'>
               <Link className="nav-link active" aria-current="page" to="#">Home</Link>
             </li>
-            {isLoggedIn && (
+            {isLoggedIn&&isAdmin === 'false' && (
               <li className='nav-item'>
                 <Link className="nav-link" to="/order">My Orders</Link>
               </li>
@@ -43,10 +43,17 @@ export default function Navbar() {
                 <div className='btn btn-secondary text-success mx-2'>
                 
                 {isAdmin === 'true' && (
-                    <Link to="/admin" className='mx-3' style={{color:'white'}}>Admin</Link>
+                    <Link to="/admin" className='mx-3' style={{color:'white'}}>Add Items</Link>
+          
                   )}
-                  
-                  <Link  to="/cart">My Cart</Link>
+                  {isAdmin === 'true' && (
+                    <Link to="/delete" className='mx-3' style={{color:'white'}}>Delete Items</Link>
+          
+                  )}
+                  {isAdmin === 'false' && (
+                    <Link  to="/cart">My Cart</Link>
+                  )}
+        
                   <Badge bg="primary">{state.length}</Badge>
                 </div>
                 <div className='btn btn-danger text-success' onClick={handleClick}>LogOut </div>

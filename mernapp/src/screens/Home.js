@@ -37,7 +37,7 @@ export default function Home() {
       <div className='container'>
         <button className='mx-2' onClick={()=>setfiltertype(false)}>All</button>
         <button className='mx-2' onClick={()=>setfiltertype("veg")}>Veg</button>
-        <button onClick={()=>setfiltertype("non-veg")}>Non-veg</button>
+        <button onClick={()=>setfiltertype("nonveg")}>Non-veg</button>
         {selectedCategory.map((category) => (
           <div key={category}>
             <div className='text-4xl m-2 text-center font-bold uppercase'>

@@ -8,7 +8,7 @@ const mongoDB = async () => {
         console.log("Connected to MongoDB");
         // Use await to get the data from MongoDB
         const data = await mongoose.connection.db.collection("pizzadatas").find({}).toArray();
-        console.log(data);
+       console.log(data);
          global.pizzadatas=data;
        // global.gofood = data;
         //global.gofood.c

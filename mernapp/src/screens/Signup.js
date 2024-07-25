@@ -105,8 +105,7 @@ export default function Signup() {
                         <label className="form-check-label" htmlFor="form2Example3" style={{ fontSize: '0.8rem' }}>
                           I agree all statements in <a href="#!">Terms of service</a>
                         </label>
-                      </div>
-    
+                      </div> 
                       <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-lg">Register</button>
                         <Link to='/login' className='m-3 btn btn-danger' >Already a User</Link>
