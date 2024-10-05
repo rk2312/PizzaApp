@@ -33,7 +33,7 @@ export default function ResetPass() {
     }
 
     return (
-        <form onSubmit={handleSubmit} method='post' action='/api/changePass'>
+        <form onSubmit={handleSubmit} >
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                 <div className="card text-center" style={{ width: "300px" }}>
                     <div className="card-header h5 text-white bg-primary">Password Reset</div>
