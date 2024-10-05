@@ -28,7 +28,7 @@ export default function Order() {
     const clearOrders = async () => {
         try {
             const useremail = localStorage.getItem("email");
-            const response = await fetch("http://localhost:5000/api/clearorders", {
+            const response = await fetch("https://pizzaapp-api.onrender.com/api/clearorders", {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json'

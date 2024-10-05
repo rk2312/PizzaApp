@@ -26,7 +26,7 @@ export default function Delete() {
 
   const deleteData = async (id) => {
     try {
-        let response = await fetch(`http://localhost:5000/api/deletedata`, {
+        let response = await fetch(`https://pizzaapp-api.onrender.com/api/deletedata`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

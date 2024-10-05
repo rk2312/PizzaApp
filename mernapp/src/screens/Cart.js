@@ -20,7 +20,7 @@ export default function Cart() {
         let useremail=localStorage.getItem("email");
         let orderDate = new Date().toDateString();
       // console.log(useremail);
-        await fetch("http://localhost:5000/api/orderData",{
+        await fetch("https://pizzaapp-api.onrender.com/api/orderData",{
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ export default function Cart() {
               "order_id":  order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
               "handler": async function (response) {
                   const value={...response,};
-                  const validate=await fetch("http://localhost:5000/api/paymetverify",{
+                  const validate=await fetch("https://pizzaapp-api.onrender.com/api/paymetverify",{
                       method:"POST",
                       headers: { 
                         'Content-Type': 'application/json'
