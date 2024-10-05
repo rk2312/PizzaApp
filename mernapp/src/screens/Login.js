@@ -38,31 +38,6 @@ export default function Login() {
   if (loggedIn) {
     return <Navigate to="/" replace />;
   }
-
-  // return (
-  //   <div style={{
-  //     height: "90vh",
-  //     backgroundImage:
-  //         'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlkf5w_kMhasj8ERvaGvasnxqX76OUDGOLuA&s")',
-  //     backgroundSize: "cover",
-  // }}
-  // className="flex justify-center items-center">
-  //     <form onSubmit={handleSubmit}>
-  //       <div className="mb-3">
-  //         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-  //         <input type="email" className="form-control" name="email" value={credential.email} onChange={onChange} id="exampleInputEmail1" aria-describedby="emailHelp" />
-  //         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-  //       </div>
-  //       <div className="mb-3">
-  //         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-  //         <input type="password" className="form-control" name="password" value={credential.password} onChange={onChange} id="exampleInputPassword1" />
-  //       </div>
-
-  //       <button type="submit" className="m-3 btn btn-primary">Submit</button>
-  //       <Link to='/signup' className='m-3 btn btn-danger'>Register Now</Link>
-  //     </form>
-  //   </div>
-  // );
   return (
     <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
         <div className="container py-5 h-100">
@@ -104,7 +79,8 @@ export default function Login() {
                                             <button data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                                         </div>
 
-                                        <a className="small text-muted" href="/resetPass">Forgot password?</a>
+                                        <Link to="/resetPass" className="small text-muted">Forgot password?</Link>
+
                                         <p className="mb-1 pb-lg-2" style={{ color: "#393f81" }}>
     Don't have an account?  <Link to="/signup" className="btn btn-link">Register Now</Link></p>
 
