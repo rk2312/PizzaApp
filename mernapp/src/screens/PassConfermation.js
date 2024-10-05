@@ -10,7 +10,7 @@ export default function PassConfermation() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = await fetch(`http://localhost:5000/api/resetPassword/${id}/${token}`, {
+        const data = await fetch(`https://pizzaapp-api.onrender.com/api/resetPassword/${id}/${token}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

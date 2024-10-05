@@ -10,7 +10,7 @@ export default function Home() {
   const [filtertype,setfiltertype]=useState(false);
   const loadData = async () => {
     try {
-      let response = await fetch("http://localhost:5000/api//foodData", {
+      let response = await fetch("https://pizzaapp-api.onrender.com/api//foodData", {
         method: "GET",
         headers: {
           'Content-Type': 'application/json'

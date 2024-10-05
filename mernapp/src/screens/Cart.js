@@ -46,7 +46,7 @@ export default function Cart() {
     }
     const handlePayment = async (e) => {
       try {
-      const data=  await fetch("http://localhost:5000/api/checkout",{
+      const data=  await fetch("https://pizzaapp-api.onrender.com/api/checkout",{
           method:"POST",
           headers: { 
             'Content-Type': 'application/json'

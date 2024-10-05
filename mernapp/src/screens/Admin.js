@@ -35,7 +35,7 @@ function Admin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(JSON.stringify(foodData));
-    const response = await fetch("http://localhost:5000/api/createdata", {
+    const response = await fetch("https://pizzaapp-api.onrender.com/api/createdata", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(foodData),

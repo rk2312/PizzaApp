@@ -9,7 +9,7 @@ export default function Signup() {
   //console.log(credential)
   const handlesubmit = async (e) => {
     e.preventDefault();
-    const data = await fetch("http://localhost:5000/api/signup", {
+    const data = await fetch("https://pizzaapp-api.onrender.com/api/signup", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

@@ -12,7 +12,7 @@ export default function ResetPass() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = await fetch("http://localhost:5000/api/changePass", {
+        const data = await fetch("https://pizzaapp-api.onrender.com/api/changePass", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ export default function Order() {
     const fetchData = async () => {
         try {
             const useremail = localStorage.getItem("email");
-            const response = await fetch("http://localhost:5000/api/myorderdata", {
+            const response = await fetch("https://pizzaapp-api.onrender.com/api/myorderdata", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
