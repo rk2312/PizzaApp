@@ -12,7 +12,7 @@ import messageRoute from './Routes/messageRoute.js';
 
 const app = express();
 //const server = createServer(app);
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 mongoDB();
 
 

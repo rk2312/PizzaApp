@@ -4,7 +4,7 @@ async function handledisplay(req,res)
     try{
      
      // res.send(global.gofood);
-     //console.log(global.pizzadatas);
+     console.log(global.pizzadatas);
     res.send(global.pizzadatas);
       
     }
