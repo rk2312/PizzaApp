@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import{Link} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 export default function PassConfermation() {
@@ -51,8 +52,9 @@ export default function PassConfermation() {
                         <div className="mt-4">
                             <hr />
                             <div className="d-flex justify-content-between mt-4">
-                                <a className="" href="/login">Login</a>
-                                <a className="" href="/register">Register</a>
+                            <Link to="/login" className="">Login</Link>
+                            <Link to="/register" className="">Register</Link>
+
                             </div>
                         </div>
                     </div>

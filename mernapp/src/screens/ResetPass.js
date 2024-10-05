@@ -47,8 +47,9 @@ export default function ResetPass() {
                         </div>
                         <button type='submit' className='m-3 btn btn-danger'>Reset Password</button>
                         <div className="d-flex justify-content-between mt-4">
-                            <a className="" href="/login" mx-2>Login</a>
-                            <a className="" href="/signup">Register</a>
+                        <Link to="/login" className="mx-2">Login</Link>
+                        <Link to="/signup" className="">Register</Link>
+
                         </div>
                     </div>
                 </div>
