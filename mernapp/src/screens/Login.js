@@ -105,7 +105,9 @@ export default function Login() {
                                         </div>
 
                                         <a className="small text-muted" href="/resetPass">Forgot password?</a>
-                                        <p className="mb-1 pb-lg-2" style={{ color: "#393f81" }}>Don't have an account? <a href="/signup" style={{ color: "#393f81" }}>Register here</a></p>
+                                        <p className="mb-1 pb-lg-2" style={{ color: "#393f81" }}>
+    Don't have an account?  <Link to="/signup" className="btn btn-link">Register Now</Link></p>
+
                                         <a href="#!" className="small text-muted">Terms of use.</a>
                                         <a href="#!" className="small text-muted">Privacy policy</a>
                                     </form>
