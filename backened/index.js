@@ -15,8 +15,9 @@ const app = express();
 const PORT = 5000;
 mongoDB();
 
+
 // Middleware
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://pizzaapp-frontend-6v5r.onrender.com' }));
 app.use(express.json());
 app.use("/api", router);
 app.use("/chat",chatRoute);
