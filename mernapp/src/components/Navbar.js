@@ -31,6 +31,16 @@ export default function Navbar() {
                 <Link className="nav-link" to="/order">My Orders</Link>
               </li>
             )}
+            {isLoggedIn && isAdmin === 'true' && (
+              <li className='nav-item'>
+                <Link className="nav-link" to="/chat">chat</Link>
+              </li>
+            )}
+            {isLoggedIn && isAdmin === 'false' && (
+              <li className='nav-item'>
+                <Link className="nav-link" to="/chat">chat</Link>
+              </li>
+            )}
           </div>
           <div className="d-flex ms-auto">
             {!isLoggedIn ? (
@@ -53,7 +63,7 @@ export default function Navbar() {
                   {isAdmin === 'false' && (
                     <Link  to="/cart">My Cart</Link>
                   )}
-        
+                 
                   <Badge bg="primary">{state.length}</Badge>
                 </div>
                 <div className='btn btn-danger text-success' onClick={handleClick}>LogOut </div>

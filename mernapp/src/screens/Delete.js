@@ -11,7 +11,9 @@ export default function Delete() {
           "Content-Type": "application/json",
         },
       });
+     // console.log(response);
       const data = await response.json();
+      //console.log(data);
       setFooditem(data);
     } catch (error) {
       console.error("Error fetching data:", error);

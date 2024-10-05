@@ -4,10 +4,12 @@ import { CartContext } from '../utils/ContextReducer';
 const priceoptions=["small","medium","large"];
 export default function Card(props) {
     const data=props.fooddata;
+    
     const isLoggedIn = localStorage.getItem("token");
     const {state,dispatch}=useContext(CartContext);
     if (!data) 
     {
+       
       return <div>Loading...</div>;
     }
     const [qty,setQty]=useState(1);
@@ -18,11 +20,12 @@ export default function Card(props) {
     const handleSize=(e)=>{
       setSize(e.target.value);
     } 
+    //console.log(state);
    const handleAddCart=async ()=>{
     const updateitem=await state.find((e)=>e.tempId===data._id+size); 
     if(!isLoggedIn)
     {
-      alert(" Login to Add to cart");
+      alert(" Login First for Add to cart");
     }
     //checking if size is not present in cart then simple add
     if(!updateitem&&isLoggedIn){
@@ -50,7 +53,7 @@ export default function Card(props) {
       
      
    };
-   console.log(size);
+   //console.log(size);
   //calculate the final price after selecting 
  let finalprice=qty* parseInt(data.prices[size]);
   return (
@@ -62,7 +65,7 @@ export default function Card(props) {
             <p className="card-text" style={{ fontSize: '12px' }}>{data.description}</p>
             <div className='container'>
               <select className='m-2 h-10 bg-danger rounded' onChange={handleQty} style={{ fontSize: '20px' }}>
-                {Array.from(Array(6), (e, i) => {
+                {Array.from(Array(8), (e, i) => {
                   return (
                     <option key={i + 1} value={i + 1}>{i + 1}</option>
                   )

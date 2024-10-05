@@ -1,0 +1,100 @@
+/* AdminChat.css */
+.admin-chat-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .user-list {
+    width: 250px; /* Increase the width of the user list */
+    background: white;
+    border-right: 1px solid #ddd;
+    padding: 20px; /* Increase padding for better spacing */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for visual separation */
+  }
+  
+  .user-list h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-list li {
+    padding: 15px; /* Increase padding for better spacing */
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .user-list li:hover {
+    background-color: #e1f5fe;
+  }
+  
+  .chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background: white;
+    border-radius: 8px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .message-box {
+    margin-bottom: 10px;
+    padding: 8px; /* Reduced padding for smaller message blocks */
+    border-radius: 8px;
+    max-width: 60%; /* Reduced width for smaller message blocks */
+    font-size: 14px; /* Reduced font size */
+  }
+  
+  .user-msg {
+    background-color: #ffe0b2;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .admin-msg {
+    background-color: #e1f5fe;
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  .input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .send-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  

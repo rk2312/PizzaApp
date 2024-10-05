@@ -11,13 +11,15 @@ export default function Home() {
   const loadData = async () => {
     try {
       let response = await fetch("http://localhost:5000/api//foodData", {
-        method: "POST",
+        method: "GET",
         headers: {
           'Content-Type': 'application/json'
         }
       });
+      
       response = await response.json();
-      //console.log(response);
+      console.log(response);
+      //it create array of unique category
       const uniqueCategories = [...new Set(response.map(item => item.category))];
       setSelectedCategory(uniqueCategories);
       setFooditem(response);

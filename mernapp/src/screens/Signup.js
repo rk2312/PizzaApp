@@ -22,38 +22,7 @@ export default function Signup() {
       alert("enter valid credentials");
     }
   }
-  // return (
-  //   <>
-  //     <div className='container' style={{
-  //     height: "90vh",
-  //     backgroundImage:
-  //         'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMhTGGLmUY7ae046oUj_bNr4eaK2s92t68Kw&s")',
-  //     backgroundSize: "cover",
-  // }}>
-  //       <form onSubmit={handlesubmit} action='/api/signup' method='post'>
-  //         <div className="mb-3">
-  //           <label htmlFor="name" className="form-label">Name</label>
-  //           <input type="text" className="form-control" name="name" value={credential.name} onChange={onChange} id="name" />
-  //         </div>
-  //         <div className="mb-3">
-  //           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-  //           <input type="email" className="form-control" name="email" value={credential.email} onChange={onChange} id="exampleInputEmail1" aria-describedby="emailHelp" />
-  //           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-  //         </div>
-  //         <div className="mb-3">
-  //           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-  //           <input type="password" className="form-control" name="password" value={credential.password} onChange={onChange} id="exampleInputPassword1" />
-  //         </div>
-  //         <div className="mb-3">
-  //           <label htmlFor="exampleInputPassword1" className="form-label">Address</label>
-  //           <input type="text" className="form-control" name="location" value={credential.location} onChange={onChange}  />
-  //         </div>
-  //         <button type="submit" className=" m-3 btn btn-primary">Submit</button>
-  //         <Link to='/login' className='m-3 btn btn-danger' >Already a User</Link>
-  //       </form>
-  //     </div>
-  //   </>
-  //);
+  
   return (
     <section className="vh-100" style={{ backgroundColor: "#eee" }}>
       <div className="container h-100">

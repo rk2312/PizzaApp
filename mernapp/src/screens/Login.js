@@ -19,13 +19,18 @@ export default function Login() {
       body: JSON.stringify({ email: credential.email, password: credential.password }),
     });
     const json = await data.json();
-    //console.log(json);
+    console.log(json);
+   // console.log(json.user._id);
+    //  console.log(json.token);
+    //console.log(json.token);
     if (!json.success) {
       alert("Enter valid credentials");
     } else {
       localStorage.setItem("token", json.token);
       localStorage.setItem("email", json.user.email);
       localStorage.setItem("isAdmin", json.user.isAdmin);
+      localStorage.setItem("userId", json.user._id);
+      console.log(json.user._id);
       setLoggedIn(true);
     }
   };

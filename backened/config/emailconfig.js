@@ -13,4 +13,4 @@ let transporter = nodemailer.createTransport({
  // requireTLS:true
 })
 
-export default transporter
+export default transporter;

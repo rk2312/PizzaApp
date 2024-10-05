@@ -18,7 +18,7 @@ import handledeleteFoodData from "../controller/deleteFoodData.js";
 import Orderdelete from "../controller/deleteOrder.js";
 router.post("/signup", handlesignup);
 router.post("/login", handlelogin);
-router.post("/foodData", handledisplay);
+router.get("/foodData", handledisplay);
 router.post("/orderData", handleorder);
 router.post("/myorderdata", handlemyorderdata);
 router.post("/createdata", handlecreateFoodData);

@@ -13,7 +13,25 @@ import Admin from './screens/Admin.js';
 import ResetPass from './screens/ResetPass.js';
  import Delete from './screens/Delete.js';
 import PassConfermation from './screens/PassConfermation.js';
+import { useState, useEffect } from 'react';
+import Chat from './chat/chat.js';
 function App() {
+  const [userId, setUserId] = useState(null);  // State to hold userId
+     
+  useEffect(() => {
+    // Retrieve userId from localStorage after login
+    const storedUserId = localStorage.getItem("email");  // Get userId from localStorage
+    // const t=localStorage.getItem("email");
+    //console.log(t);
+  //  console.log(storedUserId);
+    if (storedUserId) {
+      setUserId(storedUserId);  // Set userId in the state
+    }
+  }, []);
+   //console.log(userId);
+  // if (!userId) {
+  //   return <div>Loading...</div>;  // Show a loading state while retrieving userId
+  // }
   return (
     <CartProvider>
     <Router>
@@ -28,6 +46,10 @@ function App() {
           <Route path='/resetPass' element={<ResetPass />} />
           <Route path='/confirmPass/:id/:token' element={<PassConfermation />} />
           <Route path='/delete' element={<Delete />} />
+          {/* <Route path='/complaint' element={<ComplaintChat />} /> */}
+          {/* <Route path="/userchat" element={<UserChat userId={userId}/>} />
+          <Route path='/Adminchat' element={<AdminChat />} /> */}
+          <Route path='/chat' element={<Chat />} />
         </Routes>
       </div>
     </Router>
