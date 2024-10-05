@@ -35,7 +35,7 @@ export default function Signup() {
     
                     <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{ color: "white" }}>Sign up</p>
     
-                    <form onSubmit={handlesubmit} action='/api/signup' method='post' className="mx-1 mx-md-4">
+                    <form onSubmit={handlesubmit}  className="mx-1 mx-md-4">
     
                       <div className="d-flex flex-row align-items-center mb-1">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
