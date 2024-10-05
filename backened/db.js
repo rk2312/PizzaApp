@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const URL = "mongodb://127.0.0.1:27017/Flavora";
+const URL = process.env.MONGO_URI;
 
 const mongoDB = async () => {
     try {
